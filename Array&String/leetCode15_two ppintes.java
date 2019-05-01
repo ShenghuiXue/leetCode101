@@ -34,7 +34,7 @@ class Solution {
       Arrays.sort (nums);
       // next loop-through the sorted array if the value is larger than 0, stop
       for (int i =0; i<nums.length-2; i++) {
-          //if (nums[i] >0) break; // if current number is larger than 0, it is impossible to adde three positive numbers to be 0
+          if (nums[i] >0) break; // if current number is larger than 0, it is impossible to adde three positive numbers to be 0
           // additional two pointers to swipe through the array after i in two directions.
           if (i == 0 || (i>0 && nums[i] != nums[i-1])) {
               int target = 0-nums[i];// use a int to store the numers to avoid repeat calculations
@@ -67,5 +67,5 @@ What did I learn?
 2. sort array Arrays.sort(nums);
 3. Using two pointer to handle 2 sum with while loop. Don't forget p1++ p2-- to
 avoid infinite loop
-4. I think it is also possible to use HashSet since non-dulicates list are used.  
+4. I think it is also possible to use HashSet since non-dulicates list are used.
 */
